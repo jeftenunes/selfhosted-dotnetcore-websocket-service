@@ -64,8 +64,8 @@ namespace Chat.Jeri.Service.Middlewares
                 }
             }
 
-            WebSocket dummy;
-            sockets.TryRemove(socketId, out dummy);
+            WebSocket socketToDelete = null;
+            sockets.TryRemove(socketId, out socketToDelete);
 
             await currentSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", ct);
             currentSocket.Dispose();

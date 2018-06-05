@@ -14,6 +14,11 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Chat.Jeri.Service", "src\Ch
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Chat.Jeri.Test.Console", "src\Chat.Jeri.Test.Console\Chat.Jeri.Test.Console.xproj", "{D6B03C6F-83DF-49DD-B3E5-FDCA3C2FC81C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML Client Test", "HTML Client Test", "{8F0A4D08-76AC-4C1B-B63B-8DAFAB1FF3CF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\client.html = ..\..\..\..\Desktop\client.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

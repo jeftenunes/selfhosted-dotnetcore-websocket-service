@@ -20,8 +20,7 @@ namespace Chat.Jeri.Service
         {
             services.AddMvc();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(LogLevel.Debug);
@@ -62,7 +61,6 @@ namespace Chat.Jeri.Service
             var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
             while (!result.CloseStatus.HasValue)
             {
-                // If the client send "ServerClose", then they want a server-originated close to occur
                 string content = "<<binary>>";
                 if (result.MessageType == WebSocketMessageType.Text)
                 {
